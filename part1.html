@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>Untitled</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>part1</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -11838,7 +11838,7 @@ div#notebook {
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[nltk_data] Downloading package stopwords to /home/pyos/nltk_data...
-[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data]   Unzipping corpora/stopwords.zip.
 [nltk_data] Downloading package punkt to /home/pyos/nltk_data...
 [nltk_data]   Package punkt is already up-to-date!
 </pre>
@@ -11907,7 +11907,7 @@ div#notebook {
     <span class="k">try</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">readability</span><span class="o">.</span><span class="n">Document</span><span class="p">(</span><span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">)</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
     <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s1">&#39;error: could not fetch </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="k">return</span> <span class="s1">&#39;could not fetch </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -11950,7 +11950,7 @@ div#notebook {
                 <span class="c1"># in this loop, we&#39;re only interested in the former.</span>
                 <span class="k">continue</span>
             <span class="n">time</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="n">res</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">])</span>
-            <span class="k">if</span> <span class="n">last_debug</span> <span class="o">-</span> <span class="nb">id</span> <span class="o">&gt;</span> <span class="mi">1000</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">last_debug</span> <span class="o">-</span> <span class="nb">id</span> <span class="o">&gt;</span> <span class="mi">5000</span><span class="p">:</span>
                 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;worker #</span><span class="si">{}</span><span class="s1"> - item #</span><span class="si">{}</span><span class="s1"> - </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">time</span><span class="p">))</span>
                 <span class="n">last_debug</span> <span class="o">=</span> <span class="nb">id</span>
             <span class="k">if</span> <span class="n">time</span> <span class="o">&lt;</span> <span class="n">end</span><span class="p">:</span>
@@ -12018,472 +12018,105 @@ div#notebook {
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Starting from 15444717
-worker #7 - item #15443690 - 2017-10-10 20:34:25
-worker #3 - item #15443704 - 2017-10-10 20:35:44
-worker #9 - item #15443678 - 2017-10-10 20:33:32
-worker #6 - item #15443691 - 2017-10-10 20:34:26
-worker #5 - item #15443612 - 2017-10-10 20:25:50
-worker #1 - item #15443656 - 2017-10-10 20:30:37
-worker #0 - item #15443607 - 2017-10-10 20:25:26
-worker #8 - item #15443629 - 2017-10-10 20:28:23
-worker #2 - item #15443675 - 2017-10-10 20:33:08
-worker #4 - item #15443633 - 2017-10-10 20:28:38
-worker #7 - item #15442600 - 2017-10-10 18:28:24
-worker #3 - item #15442614 - 2017-10-10 18:30:16
-worker #5 - item #15442572 - 2017-10-10 18:24:30
-worker #6 - item #15442601 - 2017-10-10 18:28:34
-worker #8 - item #15442599 - 2017-10-10 18:28:19
-worker #2 - item #15442665 - 2017-10-10 18:36:00
-worker #0 - item #15442557 - 2017-10-10 18:22:31
-worker #4 - item #15442623 - 2017-10-10 18:31:02
-worker #7 - item #15441590 - 2017-10-10 16:33:23
-worker #1 - item #15442636 - 2017-10-10 18:32:41
-worker #8 - item #15441549 - 2017-10-10 16:28:11
-worker #3 - item #15441564 - 2017-10-10 16:29:52
-worker #5 - item #15441562 - 2017-10-10 16:29:39
-worker #6 - item #15441481 - 2017-10-10 16:16:51
-worker #2 - item #15441505 - 2017-10-10 16:20:32
-worker #9 - item #15442508 - 2017-10-10 18:18:21
-worker #4 - item #15441593 - 2017-10-10 16:33:51
-worker #0 - item #15441537 - 2017-10-10 16:25:53
-worker #5 - item #15440522 - 2017-10-10 12:35:04
-worker #9 - item #15441488 - 2017-10-10 16:18:10
-worker #7 - item #15440580 - 2017-10-10 12:51:56
-worker #3 - item #15440544 - 2017-10-10 12:40:04
-worker #4 - item #15440523 - 2017-10-10 12:35:07
-worker #8 - item #15440489 - 2017-10-10 12:27:54
-worker #6 - item #15440451 - 2017-10-10 12:16:12
-worker #1 - item #15441596 - 2017-10-10 16:34:01
 worker #7 - item #15439520 - 2017-10-10 08:12:15
 worker #4 - item #15439513 - 2017-10-10 08:10:52
 worker #3 - item #15439424 - 2017-10-10 07:46:35
-worker #2 - item #15440325 - 2017-10-10 11:47:48
 worker #8 - item #15439339 - 2017-10-10 07:24:01
-worker #1 - item #15440586 - 2017-10-10 12:53:52
-worker #4 - item #15438503 - 2017-10-10 03:41:19
 worker #5 - item #15439492 - 2017-10-10 08:03:43
 worker #6 - item #15439381 - 2017-10-10 07:33:39
 worker #2 - item #15439125 - 2017-10-10 06:36:27
-worker #8 - item #15438299 - 2017-10-10 02:45:40
-worker #0 - item #15440497 - 2017-10-10 12:29:49
 worker #1 - item #15439556 - 2017-10-10 08:22:44
-worker #9 - item #15440438 - 2017-10-10 12:12:03
-worker #2 - item #15438055 - 2017-10-10 01:45:27
-worker #8 - item #15437279 - 2017-10-09 23:40:09
-worker #4 - item #15437403 - 2017-10-09 23:57:23
-worker #8 - item #15436249 - 2017-10-09 21:27:59
 worker #9 - item #15439308 - 2017-10-10 07:16:45
-worker #5 - item #15438462 - 2017-10-10 03:29:54
-worker #2 - item #15436975 - 2017-10-09 23:01:08
-worker #6 - item #15438321 - 2017-10-10 02:50:43
-worker #9 - item #15438228 - 2017-10-10 02:25:25
-worker #8 - item #15435229 - 2017-10-09 19:27:34
-worker #7 - item #15438510 - 2017-10-10 03:42:13
-worker #3 - item #15438304 - 2017-10-10 02:46:34
-worker #2 - item #15435935 - 2017-10-09 20:52:15
-worker #5 - item #15437382 - 2017-10-09 23:55:24
-worker #6 - item #15437151 - 2017-10-09 23:22:11
-worker #4 - item #15436363 - 2017-10-09 21:43:53
-worker #7 - item #15437420 - 2017-10-10 00:00:30
-worker #9 - item #15437068 - 2017-10-09 23:11:53
-worker #3 - item #15437124 - 2017-10-09 23:18:31
-worker #1 - item #15438546 - 2017-10-10 03:50:50
 worker #0 - item #15439367 - 2017-10-10 07:28:46
-worker #6 - item #15436041 - 2017-10-09 21:03:06
 worker #8 - item #15434109 - 2017-10-09 17:35:17
-worker #4 - item #15435283 - 2017-10-09 19:35:03
-worker #0 - item #15438357 - 2017-10-10 03:01:49
-worker #3 - item #15435854 - 2017-10-09 20:42:33
-worker #2 - item #15434725 - 2017-10-09 18:36:30
-worker #7 - item #15436400 - 2017-10-09 21:48:47
-worker #9 - item #15436048 - 2017-10-09 21:04:09
 worker #4 - item #15434263 - 2017-10-09 17:53:47
-worker #1 - item #15437466 - 2017-10-10 00:07:42
-worker #6 - item #15435031 - 2017-10-09 19:04:29
-worker #5 - item #15436322 - 2017-10-09 21:38:53
-worker #0 - item #15437317 - 2017-10-09 23:45:46
-worker #7 - item #15435390 - 2017-10-09 19:47:09
-worker #8 - item #15433059 - 2017-10-09 14:53:06
-worker #3 - item #15434714 - 2017-10-09 18:35:27
-worker #4 - item #15433183 - 2017-10-09 15:18:43
-worker #9 - item #15435018 - 2017-10-09 19:03:25
-worker #0 - item #15436267 - 2017-10-09 21:30:17
 worker #6 - item #15434021 - 2017-10-09 17:24:46
-worker #8 - item #15432029 - 2017-10-09 10:06:23
 worker #3 - item #15433584 - 2017-10-09 16:29:48
-worker #4 - item #15432163 - 2017-10-09 10:57:33
 worker #7 - item #15434100 - 2017-10-09 17:33:50
-worker #1 - item #15436406 - 2017-10-09 21:49:28
-worker #0 - item #15435207 - 2017-10-09 19:24:17
-worker #6 - item #15432971 - 2017-10-09 14:32:12
-worker #5 - item #15435272 - 2017-10-09 19:32:54
 worker #9 - item #15433988 - 2017-10-09 17:21:52
-worker #4 - item #15431083 - 2017-10-09 04:42:25
-worker #8 - item #15430969 - 2017-10-09 04:09:41
-worker #6 - item #15431871 - 2017-10-09 09:16:44
 worker #0 - item #15434187 - 2017-10-09 17:43:59
-worker #7 - item #15433090 - 2017-10-09 15:00:14
-worker #9 - item #15432978 - 2017-10-09 14:33:18
-worker #3 - item #15432514 - 2017-10-09 12:42:04
 worker #5 - item #15434262 - 2017-10-09 17:53:43
-worker #1 - item #15435376 - 2017-10-09 19:45:22
 worker #2 - item #15433665 - 2017-10-09 16:40:36
-worker #6 - item #15430741 - 2017-10-09 03:14:36
-worker #0 - item #15433097 - 2017-10-09 15:01:53
-worker #5 - item #15433252 - 2017-10-09 15:30:28
-worker #9 - item #15431938 - 2017-10-09 09:38:34
-worker #4 - item #15429943 - 2017-10-08 23:53:34
-worker #3 - item #15431464 - 2017-10-09 06:49:57
-worker #2 - item #15432655 - 2017-10-09 13:18:13
 worker #1 - item #15434296 - 2017-10-09 17:57:52
-worker #8 - item #15429879 - 2017-10-08 23:36:06
-worker #6 - item #15429651 - 2017-10-08 22:50:34
-worker #9 - item #15430918 - 2017-10-09 03:58:06
-worker #5 - item #15432202 - 2017-10-09 11:05:56
-worker #3 - item #15430094 - 2017-10-09 00:28:55
-worker #1 - item #15433256 - 2017-10-09 15:30:52
 worker #8 - item #15428739 - 2017-10-08 19:13:34
 worker #6 - item #15428621 - 2017-10-08 18:46:36
 worker #4 - item #15428933 - 2017-10-08 19:55:16
-worker #5 - item #15431102 - 2017-10-09 04:48:42
-worker #8 - item #15427629 - 2017-10-08 12:55:27
-worker #2 - item #15431625 - 2017-10-09 07:42:50
-worker #5 - item #15429962 - 2017-10-08 23:58:15
-worker #9 - item #15429768 - 2017-10-08 23:12:37
-worker #4 - item #15427923 - 2017-10-08 15:12:31
-worker #0 - item #15432077 - 2017-10-09 10:23:40
-worker #6 - item #15427601 - 2017-10-08 12:46:09
-worker #8 - item #15426599 - 2017-10-08 04:39:29
-worker #3 - item #15429054 - 2017-10-08 20:26:07
 worker #9 - item #15428728 - 2017-10-08 19:11:02
-worker #2 - item #15430525 - 2017-10-09 02:03:59
-worker #0 - item #15431027 - 2017-10-09 04:25:30
 worker #5 - item #15428762 - 2017-10-08 19:19:59
 worker #3 - item #15428014 - 2017-10-08 15:49:55
-worker #6 - item #15426531 - 2017-10-08 04:14:20
-worker #2 - item #15429375 - 2017-10-08 21:43:10
-worker #1 - item #15432226 - 2017-10-09 11:14:12
-worker #7 - item #15431980 - 2017-10-09 09:51:29
-worker #4 - item #15426633 - 2017-10-08 04:55:08
-worker #8 - item #15425569 - 2017-10-07 23:38:43
-worker #6 - item #15425511 - 2017-10-07 23:24:31
-worker #0 - item #15430017 - 2017-10-09 00:10:29
-worker #7 - item #15430910 - 2017-10-09 03:57:05
-worker #4 - item #15425593 - 2017-10-07 23:44:03
 worker #2 - item #15428365 - 2017-10-08 17:38:46
-worker #1 - item #15431176 - 2017-10-09 05:17:51
-worker #3 - item #15426944 - 2017-10-08 07:10:12
-worker #9 - item #15427688 - 2017-10-08 13:26:24
-worker #6 - item #15424471 - 2017-10-07 19:43:04
-worker #3 - item #15425904 - 2017-10-08 00:55:48
-worker #5 - item #15427722 - 2017-10-08 13:38:28
-worker #4 - item #15424533 - 2017-10-07 19:56:00
-worker #1 - item #15429996 - 2017-10-09 00:06:18
-worker #2 - item #15427115 - 2017-10-08 08:46:00
-worker #9 - item #15426668 - 2017-10-08 05:07:40
 worker #6 - item #15423451 - 2017-10-07 15:14:20
-worker #8 - item #15424539 - 2017-10-07 19:56:50
-worker #7 - item #15429900 - 2017-10-08 23:42:07
-worker #2 - item #15426105 - 2017-10-08 01:51:01
-worker #9 - item #15425558 - 2017-10-07 23:35:42
 worker #0 - item #15428987 - 2017-10-08 20:08:34
-worker #6 - item #15422431 - 2017-10-07 08:37:18
-worker #3 - item #15424714 - 2017-10-07 20:32:56
-worker #5 - item #15426562 - 2017-10-08 04:26:46
 worker #8 - item #15423499 - 2017-10-07 15:30:03
-worker #9 - item #15424498 - 2017-10-07 19:49:24
-worker #6 - item #15421281 - 2017-10-07 02:41:07
 worker #4 - item #15423473 - 2017-10-07 15:22:01
-worker #0 - item #15427917 - 2017-10-08 15:09:40
-worker #2 - item #15425025 - 2017-10-07 21:40:58
-worker #3 - item #15423674 - 2017-10-07 16:24:02
 worker #7 - item #15428860 - 2017-10-08 19:40:29
-worker #6 - item #15420211 - 2017-10-06 23:32:34
-worker #8 - item #15422409 - 2017-10-07 08:27:16
-worker #5 - item #15425502 - 2017-10-07 23:21:17
 worker #1 - item #15428986 - 2017-10-08 20:08:22
-worker #0 - item #15426857 - 2017-10-08 06:32:01
-worker #2 - item #15423865 - 2017-10-07 17:21:16
-worker #6 - item #15418981 - 2017-10-06 21:14:40
-worker #4 - item #15422443 - 2017-10-07 08:44:10
-worker #0 - item #15425837 - 2017-10-08 00:36:11
-worker #5 - item #15424412 - 2017-10-07 19:30:13
-worker #7 - item #15427850 - 2017-10-08 14:40:34
 worker #3 - item #15422634 - 2017-10-07 09:54:04
 worker #9 - item #15423478 - 2017-10-07 15:23:25
-worker #8 - item #15421379 - 2017-10-07 03:02:57
-worker #4 - item #15421403 - 2017-10-07 03:08:33
-worker #0 - item #15424787 - 2017-10-07 20:50:52
-worker #1 - item #15427886 - 2017-10-08 15:00:14
-worker #7 - item #15426840 - 2017-10-08 06:22:33
 worker #5 - item #15423402 - 2017-10-07 14:48:04
 worker #2 - item #15422805 - 2017-10-07 10:52:51
-worker #8 - item #15420149 - 2017-10-06 23:26:43
-worker #9 - item #15422428 - 2017-10-07 08:36:32
-worker #1 - item #15426836 - 2017-10-08 06:21:03
-worker #5 - item #15422362 - 2017-10-07 08:05:01
-worker #7 - item #15425770 - 2017-10-08 00:20:57
-worker #2 - item #15421725 - 2017-10-07 04:32:56
-worker #4 - item #15420193 - 2017-10-06 23:31:06
-worker #8 - item #15419119 - 2017-10-06 21:28:37
 worker #6 - item #15417891 - 2017-10-06 19:06:49
-worker #5 - item #15421182 - 2017-10-07 02:23:12
 worker #0 - item #15423617 - 2017-10-07 16:05:35
-worker #7 - item #15424640 - 2017-10-07 20:17:48
-worker #2 - item #15420705 - 2017-10-07 00:44:21
-worker #4 - item #15419043 - 2017-10-06 21:20:45
-worker #3 - item #15421604 - 2017-10-07 03:55:52
-worker #9 - item #15421118 - 2017-10-07 02:10:40
 worker #7 - item #15423610 - 2017-10-07 16:04:00
 worker #8 - item #15418109 - 2017-10-06 19:34:53
-worker #0 - item #15422377 - 2017-10-07 08:13:20
-worker #1 - item #15425656 - 2017-10-07 23:55:42
-worker #2 - item #15419685 - 2017-10-06 22:29:31
-worker #9 - item #15419948 - 2017-10-06 23:03:46
 worker #4 - item #15417953 - 2017-10-06 19:16:41
-worker #3 - item #15420564 - 2017-10-07 00:21:18
-worker #7 - item #15422530 - 2017-10-07 09:23:20
-worker #6 - item #15416871 - 2017-10-06 17:06:29
-worker #8 - item #15417019 - 2017-10-06 17:27:50
-worker #9 - item #15418918 - 2017-10-06 21:08:21
-worker #4 - item #15416903 - 2017-10-06 17:12:37
-worker #5 - item #15420142 - 2017-10-06 23:26:27
-worker #3 - item #15419484 - 2017-10-06 22:05:34
-worker #7 - item #15421500 - 2017-10-07 03:26:52
-worker #1 - item #15424576 - 2017-10-07 20:03:35
-worker #2 - item #15418655 - 2017-10-06 20:39:37
-worker #6 - item #15415851 - 2017-10-06 14:18:32
 worker #9 - item #15417888 - 2017-10-06 19:06:23
-worker #5 - item #15419112 - 2017-10-06 21:28:09
-worker #3 - item #15418444 - 2017-10-06 20:16:25
-worker #4 - item #15415843 - 2017-10-06 14:17:16
-worker #0 - item #15421257 - 2017-10-07 02:36:03
-worker #6 - item #15414771 - 2017-10-06 09:09:27
 worker #1 - item #15423566 - 2017-10-07 15:51:05
-worker #9 - item #15416868 - 2017-10-06 17:05:48
-worker #4 - item #15414743 - 2017-10-06 08:59:16
-worker #0 - item #15420077 - 2017-10-06 23:18:40
-worker #6 - item #15413731 - 2017-10-06 03:59:36
-worker #1 - item #15422486 - 2017-10-07 09:03:35
 worker #5 - item #15417922 - 2017-10-06 19:12:19
 worker #3 - item #15417414 - 2017-10-06 18:14:56
 worker #6 - item #15412711 - 2017-10-06 00:28:00
-worker #7 - item #15420440 - 2017-10-06 23:59:07
 worker #2 - item #15417595 - 2017-10-06 18:35:34
-worker #4 - item #15413723 - 2017-10-06 03:57:08
-worker #1 - item #15421166 - 2017-10-07 02:19:55
-worker #0 - item #15419067 - 2017-10-06 21:23:03
-worker #6 - item #15411631 - 2017-10-05 21:50:59
-worker #3 - item #15416394 - 2017-10-06 15:53:19
-worker #5 - item #15416892 - 2017-10-06 17:11:22
-worker #1 - item #15420076 - 2017-10-06 23:18:30
-worker #9 - item #15415818 - 2017-10-06 14:11:31
-worker #8 - item #15415989 - 2017-10-06 14:46:12
 worker #0 - item #15417937 - 2017-10-06 19:14:40
-worker #7 - item #15419390 - 2017-10-06 21:55:45
-worker #3 - item #15415294 - 2017-10-06 11:38:02
 worker #4 - item #15412713 - 2017-10-06 00:28:06
-worker #6 - item #15410601 - 2017-10-05 19:46:18
-worker #1 - item #15418926 - 2017-10-06 21:09:04
-worker #0 - item #15416807 - 2017-10-06 16:59:05
-worker #8 - item #15414929 - 2017-10-06 09:57:46
-worker #5 - item #15415872 - 2017-10-06 14:23:37
 worker #7 - item #15418170 - 2017-10-06 19:41:32
 worker #1 - item #15417836 - 2017-10-06 19:00:58
-worker #6 - item #15409571 - 2017-10-05 17:46:22
-worker #8 - item #15413799 - 2017-10-06 04:21:45
-worker #0 - item #15415777 - 2017-10-06 13:57:40
-worker #2 - item #15416535 - 2017-10-06 16:19:18
-worker #4 - item #15411633 - 2017-10-05 21:51:01
-worker #9 - item #15414728 - 2017-10-06 08:55:58
-worker #3 - item #15414274 - 2017-10-06 06:44:33
-worker #7 - item #15417140 - 2017-10-06 17:43:31
-worker #6 - item #15408551 - 2017-10-05 15:25:53
-worker #1 - item #15416796 - 2017-10-06 16:58:11
-worker #9 - item #15413718 - 2017-10-06 03:56:24
-worker #2 - item #15415375 - 2017-10-06 11:59:22
-worker #7 - item #15416120 - 2017-10-06 15:09:20
-worker #3 - item #15413194 - 2017-10-06 01:56:24
-worker #5 - item #15414862 - 2017-10-06 09:37:40
-worker #1 - item #15415736 - 2017-10-06 13:45:02
-worker #2 - item #15414315 - 2017-10-06 06:57:31
-worker #0 - item #15414747 - 2017-10-06 09:00:55
 worker #9 - item #15412658 - 2017-10-06 00:16:53
-worker #5 - item #15413852 - 2017-10-06 04:38:01
 worker #3 - item #15412164 - 2017-10-05 23:02:14
-worker #9 - item #15411618 - 2017-10-05 21:48:45
-worker #7 - item #15415030 - 2017-10-06 10:32:54
 worker #6 - item #15407531 - 2017-10-05 11:34:50
 worker #8 - item #15412769 - 2017-10-06 00:38:25
-worker #3 - item #15411124 - 2017-10-05 20:58:29
 worker #5 - item #15412842 - 2017-10-06 00:51:05
-worker #9 - item #15410558 - 2017-10-05 19:40:57
-worker #2 - item #15413145 - 2017-10-06 01:47:21
-worker #6 - item #15406511 - 2017-10-05 06:20:59
-worker #8 - item #15411719 - 2017-10-05 22:02:06
-worker #9 - item #15409378 - 2017-10-05 17:21:53
-worker #0 - item #15413717 - 2017-10-06 03:55:41
 worker #2 - item #15412085 - 2017-10-05 22:52:32
-worker #1 - item #15414706 - 2017-10-06 08:49:43
-worker #7 - item #15414000 - 2017-10-06 05:20:08
-worker #6 - item #15405331 - 2017-10-05 01:34:16
-worker #8 - item #15410639 - 2017-10-05 19:52:35
-worker #3 - item #15409914 - 2017-10-05 18:24:29
-worker #4 - item #15410583 - 2017-10-05 19:43:43
-worker #9 - item #15408368 - 2017-10-05 14:50:57
-worker #5 - item #15411692 - 2017-10-05 21:58:46
-worker #3 - item #15408844 - 2017-10-05 16:12:30
 worker #7 - item #15412910 - 2017-10-06 01:04:01
-worker #8 - item #15409589 - 2017-10-05 17:48:32
-worker #2 - item #15411025 - 2017-10-05 20:48:05
-worker #1 - item #15413666 - 2017-10-06 03:45:05
 worker #0 - item #15412587 - 2017-10-06 00:06:15
 worker #9 - item #15407218 - 2017-10-05 10:23:04
-worker #4 - item #15409543 - 2017-10-05 17:43:16
-worker #8 - item #15408569 - 2017-10-05 15:27:47
-worker #6 - item #15404311 - 2017-10-04 23:29:38
-worker #4 - item #15408513 - 2017-10-05 15:19:53
-worker #7 - item #15411880 - 2017-10-05 22:24:33
-worker #0 - item #15411367 - 2017-10-05 21:21:05
-worker #2 - item #15409965 - 2017-10-05 18:30:12
-worker #5 - item #15410612 - 2017-10-05 19:47:29
-worker #6 - item #15403271 - 2017-10-04 21:52:31
-worker #3 - item #15407814 - 2017-10-05 12:39:20
-worker #7 - item #15410850 - 2017-10-05 20:23:16
 worker #1 - item #15412646 - 2017-10-06 00:14:43
-worker #2 - item #15408805 - 2017-10-05 16:07:39
 worker #4 - item #15407453 - 2017-10-05 11:21:58
-worker #5 - item #15409582 - 2017-10-05 17:47:31
 worker #6 - item #15402261 - 2017-10-04 20:32:56
-worker #7 - item #15409780 - 2017-10-05 18:10:28
 worker #8 - item #15407429 - 2017-10-05 11:17:42
-worker #1 - item #15411426 - 2017-10-05 21:27:48
-worker #4 - item #15406443 - 2017-10-05 05:59:54
-worker #0 - item #15410327 - 2017-10-05 19:14:24
-worker #9 - item #15406198 - 2017-10-05 04:36:41
-worker #8 - item #15406229 - 2017-10-05 04:47:58
 worker #3 - item #15406804 - 2017-10-05 08:18:32
-worker #1 - item #15410406 - 2017-10-05 19:23:56
-worker #6 - item #15401211 - 2017-10-04 18:36:13
-worker #0 - item #15409297 - 2017-10-05 17:11:06
-worker #5 - item #15408542 - 2017-10-05 15:24:44
-worker #4 - item #15405163 - 2017-10-05 01:10:58
-worker #2 - item #15407675 - 2017-10-05 12:07:15
-worker #8 - item #15405139 - 2017-10-05 01:07:20
-worker #0 - item #15408267 - 2017-10-05 14:23:35
 worker #5 - item #15407532 - 2017-10-05 11:34:52
-worker #1 - item #15409376 - 2017-10-05 17:21:38
 worker #2 - item #15406625 - 2017-10-05 07:06:14
-worker #8 - item #15404059 - 2017-10-04 23:04:26
-worker #9 - item #15404958 - 2017-10-05 00:40:41
-worker #5 - item #15406482 - 2017-10-05 06:13:22
-worker #7 - item #15408660 - 2017-10-05 15:45:34
-worker #4 - item #15404153 - 2017-10-04 23:14:38
-worker #3 - item #15405724 - 2017-10-05 02:39:38
-worker #2 - item #15405605 - 2017-10-05 02:17:11
-worker #8 - item #15403049 - 2017-10-04 21:33:51
 worker #0 - item #15407177 - 2017-10-05 10:13:59
-worker #6 - item #15400131 - 2017-10-04 16:02:45
-worker #5 - item #15405452 - 2017-10-05 01:54:57
-worker #9 - item #15403708 - 2017-10-04 22:29:45
-worker #2 - item #15404545 - 2017-10-04 23:54:20
-worker #4 - item #15402733 - 2017-10-04 21:08:51
-worker #3 - item #15404704 - 2017-10-05 00:10:38
-worker #0 - item #15406157 - 2017-10-05 04:21:06
-worker #9 - item #15402678 - 2017-10-04 21:04:57
-worker #5 - item #15404292 - 2017-10-04 23:27:08
-worker #6 - item #15399101 - 2017-10-04 11:53:05
 worker #8 - item #15401999 - 2017-10-04 20:06:12
-worker #2 - item #15403535 - 2017-10-04 22:15:06
-worker #0 - item #15405127 - 2017-10-05 01:04:54
-worker #3 - item #15403684 - 2017-10-04 22:27:40
 worker #9 - item #15401668 - 2017-10-04 19:28:52
 worker #7 - item #15407620 - 2017-10-05 11:54:22
-worker #6 - item #15397941 - 2017-10-04 05:47:55
-worker #8 - item #15400919 - 2017-10-04 17:58:57
-worker #5 - item #15403202 - 2017-10-04 21:47:13
-worker #9 - item #15400638 - 2017-10-04 17:26:01
-worker #7 - item #15406580 - 2017-10-05 06:51:49
 worker #6 - item #15396881 - 2017-10-04 01:51:39
-worker #2 - item #15402495 - 2017-10-04 20:51:03
-worker #9 - item #15399618 - 2017-10-04 14:08:39
 worker #5 - item #15402132 - 2017-10-04 20:21:42
-worker #3 - item #15402374 - 2017-10-04 20:42:36
-worker #7 - item #15405510 - 2017-10-05 02:02:50
-worker #8 - item #15399859 - 2017-10-04 15:03:59
 worker #2 - item #15401445 - 2017-10-04 18:59:30
 worker #3 - item #15401324 - 2017-10-04 18:46:45
-worker #1 - item #15408336 - 2017-10-05 14:44:19
-worker #5 - item #15401002 - 2017-10-04 18:09:32
-worker #0 - item #15403987 - 2017-10-04 22:59:27
-worker #6 - item #15395841 - 2017-10-03 23:23:16
-worker #3 - item #15400284 - 2017-10-04 16:29:30
 worker #1 - item #15407326 - 2017-10-05 10:53:17
-worker #2 - item #15400375 - 2017-10-04 16:43:03
-worker #9 - item #15398568 - 2017-10-04 09:03:11
-worker #7 - item #15404360 - 2017-10-04 23:35:06
 worker #6 - done
-worker #5 - item #15399962 - 2017-10-04 15:31:26
-worker #8 - item #15398759 - 2017-10-04 10:02:54
-worker #0 - item #15402767 - 2017-10-04 21:12:57
-worker #3 - item #15399224 - 2017-10-04 12:27:31
-worker #7 - item #15403310 - 2017-10-04 21:55:19
-worker #8 - item #15397649 - 2017-10-04 04:31:28
 worker #0 - item #15401757 - 2017-10-04 19:40:04
-worker #1 - item #15406156 - 2017-10-05 04:20:46
-worker #9 - item #15397408 - 2017-10-04 03:27:58
-worker #2 - item #15399335 - 2017-10-04 13:04:06
 worker #8 - item #15396539 - 2017-10-04 00:52:56
-worker #1 - item #15405126 - 2017-10-05 01:04:37
 worker #4 - item #15401673 - 2017-10-04 19:29:21
-worker #3 - item #15398084 - 2017-10-04 06:26:48
-worker #2 - item #15398275 - 2017-10-04 07:33:23
-worker #1 - item #15404066 - 2017-10-04 23:05:03
-worker #8 - item #15395509 - 2017-10-03 22:47:44
-worker #3 - item #15397054 - 2017-10-04 02:20:33
 worker #8 - done
 worker #9 - item #15396228 - 2017-10-04 00:09:46
-worker #1 - item #15402966 - 2017-10-04 21:26:57
-worker #4 - item #15400653 - 2017-10-04 17:27:16
-worker #2 - item #15397165 - 2017-10-04 02:41:37
 worker #3 - item #15396004 - 2017-10-03 23:43:10
-worker #0 - item #15400667 - 2017-10-04 17:30:23
 worker #3 - done
 worker #1 - item #15401906 - 2017-10-04 19:57:44
-worker #4 - item #15399573 - 2017-10-04 13:59:57
 worker #2 - item #15396145 - 2017-10-03 23:59:52
-worker #5 - item #15398922 - 2017-10-04 10:55:37
 worker #7 - item #15402280 - 2017-10-04 20:34:14
 worker #9 - done
-worker #1 - item #15400826 - 2017-10-04 17:49:28
 worker #2 - done
-worker #5 - item #15397872 - 2017-10-04 05:30:17
-worker #4 - item #15398503 - 2017-10-04 08:42:21
-worker #4 - item #15397483 - 2017-10-04 03:44:38
-worker #7 - item #15401100 - 2017-10-04 18:21:56
 worker #4 - item #15396403 - 2017-10-04 00:34:09
-worker #7 - item #15400090 - 2017-10-04 15:56:12
 worker #5 - item #15396742 - 2017-10-04 01:29:11
-worker #4 - item #15395323 - 2017-10-03 22:29:24
 worker #4 - done
-worker #7 - item #15399070 - 2017-10-04 11:43:03
-worker #1 - item #15399656 - 2017-10-04 14:19:00
-worker #1 - item #15398606 - 2017-10-04 09:13:11
-worker #0 - item #15399557 - 2017-10-04 13:56:14
-worker #5 - item #15395632 - 2017-10-03 23:00:11
 worker #5 - done
-worker #1 - item #15397546 - 2017-10-04 04:01:49
-worker #0 - item #15398517 - 2017-10-04 08:46:45
-worker #7 - item #15398050 - 2017-10-04 06:15:27
 worker #1 - item #15396436 - 2017-10-04 00:38:50
-worker #0 - item #15397497 - 2017-10-04 03:49:22
 worker #0 - item #15396437 - 2017-10-04 00:38:53
 worker #7 - item #15397000 - 2017-10-04 02:11:39
-worker #7 - item #15395920 - 2017-10-03 23:34:38
 worker #7 - done
-worker #1 - item #15395386 - 2017-10-03 22:35:09
 worker #1 - done
-worker #0 - item #15395417 - 2017-10-03 22:39:13
 worker #0 - done
 </pre>
 </div>
@@ -12530,7 +12163,7 @@ worker #0 - done
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">min</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
@@ -12546,7 +12179,7 @@ worker #0 - done
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[8]:</div>
+<div class="prompt output_prompt">Out[7]:</div>
 
 
 
@@ -12572,13 +12205,27 @@ worker #0 - done
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tags</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;(&lt;[^&gt;]*&gt;|\s)+&#39;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
     <span class="n">v</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">unescape</span><span class="p">(</span><span class="n">tags</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">v</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()))</span>
     <span class="n">v</span><span class="p">[</span><span class="s1">&#39;comments&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">html</span><span class="o">.</span><span class="n">unescape</span><span class="p">(</span><span class="n">tags</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">lower</span><span class="p">())),</span> <span class="n">v</span><span class="p">[</span><span class="s1">&#39;comments&#39;</span><span class="p">]))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;hn-corpus-stripped.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12597,7 +12244,7 @@ worker #0 - done
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">brand_data</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\bgoogle\b&#39;</span><span class="p">,</span> <span class="n">v</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">])}</span>
@@ -12627,7 +12274,7 @@ worker #0 - done
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">brand_data</span><span class="p">)</span>
@@ -12643,13 +12290,13 @@ worker #0 - done
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[12]:</div>
+<div class="prompt output_prompt">Out[11]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>222</pre>
+<pre>1311</pre>
 </div>
 
 </div>
@@ -12669,7 +12316,7 @@ worker #0 - done
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">hostname</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
@@ -12679,7 +12326,7 @@ worker #0 - done
     <span class="k">return</span> <span class="n">host</span>
 
 <span class="n">hosts</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">Counter</span><span class="p">(</span><span class="n">hostname</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">])</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">brand_data</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">v</span><span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">])</span>
-<span class="k">for</span> <span class="n">host</span><span class="p">,</span> <span class="n">count</span> <span class="ow">in</span> <span class="n">hosts</span><span class="o">.</span><span class="n">most_common</span><span class="p">():</span>
+<span class="k">for</span> <span class="n">host</span><span class="p">,</span> <span class="n">count</span> <span class="ow">in</span> <span class="n">hosts</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">30</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{: &gt;30}</span><span class="s1"> </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">count</span><span class="p">))</span>
 </pre></div>
 
@@ -12697,102 +12344,36 @@ worker #0 - done
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>                  theverge.com 16
-                techcrunch.com 8
-                   blog.google 8
-             chrome.google.com 7
-               theguardian.com 6
-               arstechnica.com 6
-               play.google.com 6
-               docs.google.com 5
-                  engadget.com 5
-              store.google.com 5
-          translate.google.com 5
-            washingtonpost.com 4
-                    recode.net 4
-                 bloomberg.com 4
-                    github.com 4
-                    medium.com 3
-               venturebeat.com 3
-                   guardian.ng 3
-                      cnbc.com 3
-                hackernoon.com 3
-                  mashable.com 3
-                    google.com 3
-                     wired.com 3
-                   reuters.com 2
-               plus.google.com 2
-                   gizmodo.com 2
-             groups.google.com 2
-            newsroom.intel.com 2
-              drive.google.com 2
-              sites.google.com 2
-               theatlantic.com 2
-       status.cloud.google.com 2
-         developers.google.com 2
-           businessinsider.com 2
-                   studony.com 2
-          blog.21handshake.com 1
-                  mechdome.com 1
-           europaheadlines.com 1
-                 cultofmac.com 1
-              nextplatform.com 1
-                    kinsta.com 1
-                  deepmind.com 1
-       shoppinglist.google.com 1
-                     google.ca 1
-                     google.de 1
-                   dxomark.com 1
-                  futurism.com 1
-            support.google.com 1
-                  linkedin.com 1
-           conspiracytalk.info 1
-              reviewdeeper.com 1
-                   fortune.com 1
-              blog.prisync.com 1
-                freaksense.com 1
-                   9pmnews.com 1
-       issuetracker.google.com 1
-         myactivity.google.com 1
-                   9to5mac.com 1
-                       npr.org 1
-                 economist.com 1
-          technologyreview.com 1
-        contributor.google.com 1
-                  solvid.co.uk 1
-                  cacm.acm.org 1
-          blog.elasticbyte.net 1
-              cloud.google.com 1
-          bleepingcomputer.com 1
-searchbusinessanalytics.techtarget.com 1
-             chromeunboxed.com 1
-                  outcrawl.com 1
-         excellentwebworld.com 1
-                    change.org 1
-                     google.fr 1
-                  limontec.com 1
-     best-tablet-converter.com 1
-           blog.cloudflare.com 1
-                    nypost.com 1
-             dannysullivan.com 1
-                   inverse.com 1
-               mercurynews.com 1
-            startup.google.com 1
-       news.healthcareguys.com 1
-                    telegra.ph 1
-                   politico.eu 1
-      productforums.google.com 1
-               phonesdiary.com 1
-                    thewise.in 1
-            content.nanobox.io 1
-             bitsandscrews.com 1
-      nakedsecurity.sophos.com 1
-              theintercept.com 1
-               hothardware.com 1
-                      cnet.com 1
-              kristapsmors.com 1
-         im.frontrowsearch.com 1
-                    labnol.org 1
+<pre>                    medium.com 83
+                techcrunch.com 35
+                   nytimes.com 26
+                hackernoon.com 23
+               arstechnica.com 19
+                     wired.com 18
+               theguardian.com 17
+            securityaffairs.co 16
+               theatlantic.com 15
+                  betanews.com 14
+                 bloomberg.com 12
+             theregister.co.uk 12
+                       eff.org 12
+                        goo.gl 10
+                     zdnet.com 9
+          technologyreview.com 9
+               venturebeat.com 9
+             bitsandscrews.com 8
+                        qz.com 8
+              en.wikipedia.org 8
+               fastcompany.com 7
+                      cnbc.com 7
+           businessinsider.com 7
+                   blog.google 7
+                   twitter.com 7
+                      cnet.com 7
+             blog.alexellis.io 7
+                  politico.com 6
+        medium.facilelogin.com 6
+                    nature.com 6
 </pre>
 </div>
 </div>
@@ -12821,7 +12402,7 @@ searchbusinessanalytics.techtarget.com 1
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">stopwords</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">corpus</span><span class="o">.</span><span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;english&#39;</span><span class="p">)</span>
@@ -12838,7 +12419,7 @@ searchbusinessanalytics.techtarget.com 1
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[15]:</div>
+<div class="prompt output_prompt">Out[13]:</div>
 
 
 
@@ -12873,7 +12454,7 @@ searchbusinessanalytics.techtarget.com 1
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">nltk</span><span class="o">.</span><span class="n">word_tokenize</span><span class="p">(</span><span class="s2">&quot;mustn&#39;t&quot;</span><span class="p">)</span>
@@ -12889,7 +12470,7 @@ searchbusinessanalytics.techtarget.com 1
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[16]:</div>
+<div class="prompt output_prompt">Out[14]:</div>
 
 
 
@@ -12918,14 +12499,16 @@ searchbusinessanalytics.techtarget.com 1
 <div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">texts</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">brand_data</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
-    <span class="n">texts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">])</span>
-    <span class="n">texts</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="s1">&#39;comments&#39;</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_word_counts</span><span class="p">(</span><span class="n">brand_data</span><span class="p">,</span> <span class="n">stopwords</span><span class="p">):</span>
+    <span class="n">texts</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">brand_data</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+        <span class="n">texts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">])</span>
+        <span class="n">texts</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="s1">&#39;comments&#39;</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">collections</span><span class="o">.</span><span class="n">Counter</span><span class="p">(</span><span class="n">w</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">texts</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">nltk</span><span class="o">.</span><span class="n">word_tokenize</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;&#39;&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">))</span> <span class="k">if</span> <span class="n">w</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span> <span class="ow">and</span> <span class="n">w</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stopwords</span><span class="p">)</span>
 
-<span class="n">words</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">Counter</span><span class="p">(</span><span class="n">w</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">texts</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">nltk</span><span class="o">.</span><span class="n">word_tokenize</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;&#39;&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">))</span> <span class="k">if</span> <span class="n">w</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span> <span class="ow">and</span> <span class="n">w</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stopwords</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">w</span><span class="p">,</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">words</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{: &gt;20}</span><span class="s1"> </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">)))</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">get_word_counts</span><span class="p">(</span><span class="n">brand_data</span><span class="p">,</span> <span class="n">stopwords</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">w</span><span class="p">,</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">c</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{: &gt;20}</span><span class="s1"> </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">n</span> <span class="o">/</span> <span class="nb">sum</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">values</span><span class="p">())))</span>
 </pre></div>
 
 </div>
@@ -12942,26 +12525,26 @@ searchbusinessanalytics.techtarget.com 1
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>              google 0.12016622417176498
-                like 0.05436915618146139
-               https 0.048482050098118436
-               would 0.04778944938243103
-               phone 0.04755858247720189
-               could 0.041786909846473506
-                 use 0.039824541152025855
-                 one 0.039824541152025855
-                 get 0.0335911347108392
-                even 0.03312940090038093
-              people 0.030474431490245875
-                also 0.02908923005887106
-               think 0.028512062795798224
-             android 0.02816576243795452
-               pixel 0.02724229481703798
-                time 0.025857093385663166
-              really 0.025279926122590328
-          headphones 0.02504905921736119
-               still 0.024356458501673783
-               fetch 0.023432990880757242
+<pre>                like 0.004919924727830389
+                 one 0.004555320505713497
+              google 0.004259172586524675
+              people 0.004081335016961537
+                 new 0.003988323735809269
+                data 0.0036371131381783034
+                also 0.003428023778148004
+               would 0.0033037607065285733
+                time 0.0032844143600489015
+             element 0.0032591152915754846
+                 use 0.0032137257863731777
+                 get 0.0030396086680561313
+                make 0.0024488010101769223
+                even 0.0024130846782144514
+               could 0.0023185852165637467
+                work 0.0022560816356294224
+                need 0.0021615821739787177
+               using 0.002159349903231063
+                 way 0.0021310744737607734
+               first 0.002082708607561594
 </pre>
 </div>
 </div>
@@ -12969,6 +12552,15 @@ searchbusinessanalytics.techtarget.com 1
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Слова довольно-таки негуглоспецифичные.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -12990,7 +12582,7 @@ searchbusinessanalytics.techtarget.com 1
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">KNOWN_NEWS</span> <span class="o">=</span> <span class="p">[</span>
@@ -13028,13 +12620,13 @@ searchbusinessanalytics.techtarget.com 1
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[18]:</div>
+<div class="prompt output_prompt">Out[19]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>Counter({&#39;news&#39;: 62, &#39;blog&#39;: 18, None: 122})</pre>
+<pre>Counter({None: 927, &#39;blog&#39;: 207, &#39;news&#39;: 157})</pre>
 </div>
 
 </div>
